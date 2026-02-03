@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+   2 <html lang="en">
+   3 <head>
+   4     <meta charset="UTF-8">
+   5     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-
+     fit=cover">
+   6     <title>Safe Area Insets Demo</title>
+   7     <style>
+   8         * {
+   9             margin: 0;
+  10             padding: 0;
+  11             box-sizing: border-box;
+  12         }
+  13
+  14         html, body {
+  15             height: 100%;
+  16             overflow: hidden;
+  17         }
+  18
+  19         body {
+  20             background-color: red;
+  21             display: flex;
+  22             flex-direction: column;
+  23         }
+  24
+  25         .safe-area-top {
+  26             background-color: red;
+  27             height: env(safe-area-inset-top);
+  28             flex-shrink: 0;
+  29         }
+  30
+  31         .content {
+  32             background-color: white;
+  33             flex: 1;
+  34             overflow-y: auto;
+  35             padding: 20px;
+  36         }
+  37
+  38         .safe-area-bottom {
+  39             background-color: red;
+  40             height: env(safe-area-inset-bottom);
+  41             flex-shrink: 0;
+  42         }
+  43
+  44         .content h1 {
+  45             margin-bottom: 20px;
+  46             color: #333;
+  47         }
+  48
+  49         .content p {
+  50             margin-bottom: 15px;
+  51             line-height: 1.6;
+  52             color: #666;
+  53         }
+  54
+  55         .spacer {
+  56             height: 200px;
+  57         }
+  58     </style>
+  59 </head>
+  60 <body>
+  61     <div class="safe-area-top"></div>
+  62
+  63     <div class="content">
+  64         <h1>Safe Area Insets Demo</h1>
+  65         <p>This page demonstrates safe area insets with red backgrounds at the top
+     and bottom.</p>
+  66         <p>The content area has a white background and is scrollable. Scroll down t
+     o see more content.</p>
+  67
+  68         <h2>Section 1</h2>
+  69         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+     tempor incididunt ut labore et dolore magna aliqua.</p>
+  70         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+     ut aliquip ex ea commodo consequat.</p>
+  71
+  72         <h2>Section 2</h2>
+  73         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum do
+     lore eu fugiat nulla pariatur.</p>
+  74         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici
+     a deserunt mollit anim id est laborum.</p>
+  75
+  76         <h2>Section 3</h2>
+  77         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusanti
+     um doloremque laudantium.</p>
+  78         <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+     architecto beatae vitae dicta sunt explicabo.</p>
+  79
+  80         <h2>Section 4</h2>
+  81         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fug
+     it, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<
+     /p>
+  82
+  83         <h2>Section 5</h2>
+  84         <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect
+     etur, adipisci velit.</p>
+  85         <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magn
+     am aliquam quaerat voluptatem.</p>
+  86
+  87         <div class="spacer"></div>
+  88
+  89         <h2>Bottom Content</h2>
+  90         <p>You've reached the bottom of the scrollable content. The red safe area s
+     hould be visible below.</p>
+  91     </div>
+  92
+  93     <div class="safe-area-bottom"></div>
+  94 </body>
+  95 </html>
